@@ -65,6 +65,7 @@ nav {
   top: 35px; /*высота шапки в пикселях*/
   position: fixed;
   padding-left: 400px;
+  z-index: 1;
 }
 
 
@@ -545,7 +546,6 @@ input.newcomer_heart:hover {
   font-size: 40px;
 }
 
-
 span:hover{
   color: #ff6e30;
 }
@@ -555,8 +555,6 @@ section#feedback{
 }
 
 ._form {
-
-
   padding-top: 70px;
   padding-left: 520px
 }
@@ -564,8 +562,6 @@ section#feedback{
 ._form form {
   width: 497.66px;
   height: 64px;
-
-
   background: #283036;
   border-radius: 15px;
 }

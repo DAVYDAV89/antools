@@ -20,7 +20,7 @@
 					</a>
 				</div>
 
-				<nav class="header_nav">
+				<nav class="header_nav" id="top_nav">
 					<ol class="header_list">
 						<li class="header_item">
 							<a href="#" class="header_link">
@@ -509,6 +509,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./libs/bootstrap.min.js"></script>
+
+	<script>//Навигация закреплена
+      var h_hght = 35; // высота шапки
+      var h_mrg = 35;    // отступ когда шапка уже не видна
+                     
+      $(function(){
+
+        var elem = $('#top_nav');
+        var top = $(this).scrollTop();
+         
+        if(top > h_hght){
+            elem.css('top', h_mrg);
+        }           
+         
+        $(window).scroll(function(){
+            top = $(this).scrollTop();
+             
+            if (top+h_mrg < h_hght) {
+                elem.css('top', (h_hght-top));
+
+            } else {
+                elem.css('top', h_mrg);
+            }
+        });        
+      });      
+    </script>
 
 </body>
 </html>          
